@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid black;
+    /* outline: 1px solid black; */
 }
 
 /* Sidebar */
@@ -31,7 +31,6 @@ body {
     display: grid;
     grid-template: 75px / 1fr 3fr;
     align-items: center;
-    column-gap: 5px;
 }
 .grid-symbol {
     margin-left: auto;
@@ -63,5 +62,41 @@ body {
     width: fit-content;
     font-size: 1.5rem;
     font-weight: 800;
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+.important-links {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.link {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr;
+    align-items: center;
+    user-select: none;
+}
+.link:hover {
+    background-color: #26ad8d;
+}
+.messages p {
+    margin-bottom: 1px;
+}
+.link p {
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 1px;
+}
+.icon {
+    filter: invert(100%);
+    margin-left: 26px;
+    width: 22px;
+    user-select: none;
+}
+
+.util-links {
+    display: grid;
+    grid-template: repeat(3, 33px) / 1fr;
+    gap: 10px;
 }
