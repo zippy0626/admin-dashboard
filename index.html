@@ -8,82 +8,46 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <div class="grid-symbol">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
-                <div class="four"></div>
-            </div>
-            <p>Dashboard</p>
+    <div class="logo">
+        <div class="symbol" draggable="false">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
         </div>
-        <div class="important-links">
-            <div class="home link">
-                <img src="assets/icons/home.svg" alt="home" class="icon" 
-                draggable="false">
-                <p>Home</p>
-            </div>
-            <div class="profile link">
-                <img src="assets/icons/profile.svg" alt="profile" class="icon"
-                draggable="false">
-                <p>Profile</p>
-            </div>
-            <div class="messages link">
-                <img src="assets/icons/message.svg" alt="messages" class="icon"
-                draggable="false">
-                <p>Messages</p>
-            </div>
-            <div class="history link">
-                <img src="assets/icons/history.svg" alt="history" class="icon"
-                draggable="false">
-                <p>History</p>
-            </div>
-            <div class="tasks link">
-                <img src="assets/icons/tasks.svg" alt="tasks" class="icon"
-                draggable="false">
-                <p>Tasks</p>
-            </div>
-            <div class="communities link">
-                <img src="assets/icons/communities.svg" alt="communities" class="icon"
-                draggable="false">
-                <p>Communities</p>
-            </div>
+
+        <p>Dashboard</p>
+    </div>
+
+    <div class="search-and-profile">
+        <div class="searchbar">
+            <img src="assets/icons/search.svg" alt="search"
+            class="icon" draggable="false">
+
+            <input type="text" id="search-text" name="search-text"
+            aria-placeholder="I want to..."
+            placeholder="I want to..."> 
         </div>
-        <div class="util-links">
-            <div class="settings link">
-                <img src="assets/icons/settings.svg" alt="settings" class="icon"
+
+        <div class="profile">
+            <img src="assets/icons/notif-bell.svg" alt="notifications"
+            class="icon bell" draggable="false">
+
+            <div class="profile-icon">
+                <img src="assets/icons/freddy-icon.jpg" alt=""
                 draggable="false">
-                <p>Settings</p>
-            </div>
-            <div class="support link">
-                <img src="assets/icons/support.svg" alt="support" class="icon"
-                draggable="false">
-                <p>Support</p>
-            </div>
-            <div class="privacy link">
-                <img src="assets/icons/privacy.svg" alt="privacy" class="icon"
-                draggable="false">
-                <p>Privacy</p>
             </div>
 
+            <p>Freddy Krueger</p>
         </div>
     </div>
 
-    <div class="container">
-        <div class="header">
-            <div class="search-bar"></div>
-            <div class="profile-and-notif"></div>
-        </div>
-
-        <div class="action-bar">
-
-        </div>
-
-        <div class="main">
-
-        </div>
+    <div class="links">
+        <div class="main-links"></div>
+        <div class="settings-links"></div>
     </div>
+
+    <div class="main-content"></div>
 </body>
 
     <script src=""></script>
