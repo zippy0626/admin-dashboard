@@ -9,7 +9,6 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
 body {
     display: grid;
     grid-template-columns: 200px minmax(400px, calc(100vw - 200px));
@@ -20,7 +19,9 @@ body {
         "sidebar main-content";
 
     font-family: "Roboto", sans-serif;
+    background-color: blue;
 }
+
 
 /* Logo */
 .logo {
@@ -31,12 +32,13 @@ body {
     align-items: center;
     padding-left: 8px;
     padding-top: 5px;
+    color: white;
 }
 .symbol {
     width: 30px;
     height: 30px;
-    outline: 1px black solid;
-    margin: auto 1px auto auto;
+    margin: auto 1px auto auto; /**/
+    outline: 1px white solid;
     user-select: none;
 
     display: grid;
@@ -44,8 +46,13 @@ body {
     grid-template-rows: repeat(6, 1fr);
     gap: 1px;
 }
+.logo p {
+    margin-left: 8px; /**/
+    font-size: 1.4rem;
+    font-weight: 800;
+}
 .item {
-    background-color: black;
+    background-color: white;
 }
 .one {
     grid-column: 1;
@@ -63,11 +70,14 @@ body {
     grid-column: 2;
     grid-row: 3/7;
 }
-.logo p {
-    margin-left: 8px;
-    font-size: 1.4rem;
-    font-weight: 800;
+
+
+/* User Profile */
+.user-profile {
+    padding-right: 8px;
+    padding-top: 5px;
 }
+
 
 /* Sidebar */
 .sidebar {
@@ -76,7 +86,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     row-gap: 2rem;
     padding-left: 8px;
-    padding-top: 5px;
+    padding-top: 2rem;
     padding-bottom: 5px;
 }
 .links {
@@ -86,9 +96,24 @@ body {
     row-gap: 8px;
 }
 .link {
+    /* in line with logo symbol */
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+
     align-items: center;
     height: 100%;
 }
+.icon {
+    width: 21px;
+    margin: auto auto auto 23px;
+    filter: invert(100%);
+}
+.link p {
+    margin-left: 9px;
+    color: white;
+}
+
 
 /* Main Content */
 .main-content {
