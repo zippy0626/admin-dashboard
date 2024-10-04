@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primaryColor: rgb(38, 107, 203);
+    --primaryColorActive: rgb(48, 94, 159);
+    --secondaryColor: rgb(32, 120, 243);
+}
+
 /* Needed this in code, inherits viewport */
 html, body {
     height: 100%;
@@ -12,14 +18,14 @@ html, body {
 body {
     display: grid;
     grid-template-columns: 200px minmax(400px, calc(100vw - 200px));
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 60px 1fr;
 
     grid-template-areas: 
         "logo user-profile"
         "sidebar main-content";
 
     font-family: "Roboto", sans-serif;
-    background-color: blue;
+    background-color: var(--primaryColor);
 }
 
 
@@ -52,7 +58,7 @@ body {
     font-weight: 800;
 }
 .item {
-    background-color: white;
+    background-color:whitesmoke;
 }
 .one {
     grid-column: 1;
@@ -74,8 +80,75 @@ body {
 
 /* User Profile */
 .user-profile {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 300px;
+    grid-template-rows: 1fr;
+
     padding-right: 8px;
     padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    background-color: var(--secondaryColor);
+}
+.user-search {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+
+    align-items: center;
+    padding-top: 2px;
+}
+#search {
+    margin: auto;
+    width: 30px;
+}
+#user-search-text {
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1rem 0 1rem;
+    font-size: 20px;
+}
+.user {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr;
+    grid-template-rows: 1fr;
+}
+.bell-container {
+    width: 42px;
+    height: 42px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease;
+    user-select: none;
+}
+.bell-container:active {
+    background-color: var(--primaryColorActive);
+}
+#bell {
+    margin: auto;
+    width: 30px;
+    border-radius: 50%;
+}
+.user-profile-icon-container {
+    margin: auto;
+    margin-top: 5px;
+    user-select: none;
+}
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.user p {
+    margin: auto auto auto 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
 }
 
 
@@ -85,9 +158,11 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     row-gap: 2rem;
+
     padding-left: 8px;
     padding-top: 2rem;
     padding-bottom: 5px;
+    user-select: none;
 }
 .links {
     display: grid;
@@ -103,7 +178,13 @@ body {
 
     align-items: center;
     height: 100%;
+    cursor: pointer;
+    transition: all 150ms ease;
 }
+.link:hover {
+    background-color: var(--primaryColorActive);
+}
+/* Icon Styling */
 .icon {
     width: 21px;
     margin: auto auto auto 23px;
@@ -112,11 +193,18 @@ body {
 .link p {
     margin-left: 9px;
     color: white;
+    font-weight: 600;
 }
 
 
 /* Main Content */
 .main-content {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: ;
+
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color:whitesmoke;
 }
