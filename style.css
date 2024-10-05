@@ -212,7 +212,7 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: minmax(400px, 1fr);
-    grid-template-rows: 68px 1fr;
+    grid-template-rows: 80px 1fr;
     grid-template-areas: 
         "user-banner"
         "user-cards";
@@ -230,7 +230,7 @@ body {
     ;
 
     align-items: center;
-    
+    border-bottom: 1px black solid;
 }
 .user-greeting {
     display: grid;
@@ -313,7 +313,7 @@ body {
     ;
     column-gap: 1rem;
 
-    padding: 8px;
+    padding-top: 1rem;
 }
 .projects-cards {
     grid-column: 1;
@@ -334,6 +334,10 @@ body {
 }
 .projects-title {
     margin-left: 2rem;
+    align-content: center;
+}
+.announcements-title {
+    align-content: center;
 }
 .card {
     width: 100%;
