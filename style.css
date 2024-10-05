@@ -294,4 +294,12 @@ body {
     font-weight: 700;
     text-align: center;
     align-content: center;
+    user-select: none;
+}
+.button:hover {
+    transform: scale(1.02);
+    background-color: rgb(39, 90, 162);
+}
+.button:active {
+    background-color: rgb(39, 80, 138);
 }
