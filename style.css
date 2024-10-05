@@ -25,7 +25,6 @@ body {
         "sidebar main-content";
 
     font-family: "Roboto", sans-serif;
-    overflow: hidden;
 }
 
 
@@ -102,7 +101,7 @@ body {
 }
 #user-search-text {
     width: 80%;
-    height: 25px;
+    height: 28px;
     border: none;
     border-radius: 1rem;
     padding: 0 1rem 0 1rem;
@@ -167,7 +166,7 @@ body {
 .sidebar {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(250px, 300px));
     row-gap: 2rem;
 
     padding: 2rem 8px 5px 8px;
@@ -300,4 +299,44 @@ body {
 }
 .button:active {
     background-color: rgb(39, 80, 138);
+}
+
+
+/* User-Cards @bottomHalf*/
+.user-cards {
+    display: grid;
+    grid-template-columns: 1fr 275px;
+    grid-template-rows: 30px 1fr;
+    grid-template-areas:
+        "title title2"
+        "projects-cards other-cards"
+    ;
+    column-gap: 1rem;
+
+    padding: 8px;
+}
+.projects-cards {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-rows: repeat(3, minmax(200px,220px));
+    grid-template-areas:
+        "card card2"
+        "card3 card4"
+        "card5 card6"
+    ;
+    gap: 14px;
+
+    margin-left: 2rem;
+    overflow: auto;
+}
+.projects-title {
+    margin-left: 2rem;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
