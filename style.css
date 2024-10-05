@@ -29,7 +29,7 @@ body {
 }
 
 
-/* Logo */
+/* Logo @topleft*/
 .logo {
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -78,7 +78,7 @@ body {
 }
 
 
-/* User Profile */
+/* User Profile @topright*/
 .user-profile {
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 250px;
@@ -163,16 +163,14 @@ body {
 }
 
 
-/* Sidebar */
+/* Sidebar @side*/
 .sidebar {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     row-gap: 2rem;
 
-    padding-left: 8px;
-    padding-top: 2rem;
-    padding-bottom: 5px;
+    padding: 2rem 8px 5px 8px;
     user-select: none;
     background-color: var(--primaryColor);
 }
@@ -211,7 +209,7 @@ body {
 }
 
 
-/* Main Content */
+/* Main Content @bottom half*/
 .main-content {
     display: grid;
     grid-template-columns: minmax(400px, 1fr);
