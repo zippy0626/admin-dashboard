@@ -131,7 +131,7 @@ body {
 
     padding: 5px 8px 5px 8px;
     align-items: center;
-    background-color: rgb(250, 250, 250);
+    background-color: white;
 }
 .user-search {
     display: grid;
@@ -153,7 +153,7 @@ body {
     border-radius: 1rem;
     padding: 0 1rem 0 1rem;
     font-size: 20px;
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(239, 239, 239);
 }
 .user {
     display: grid;
@@ -253,9 +253,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-.banner-profile-icon-container:hover {
-    background-color: whitesmoke;
-}
 .banner-profile-icon {
     width: 50px;
     height: 50px;
@@ -314,7 +311,7 @@ body {
     column-gap: 1rem;
 
     padding-top: 1rem;
-    box-shadow: inset 0px 8px 6px -6px #888;
+    box-shadow: inset 0px 5px 10px -6px grey;
 }
 .projects-cards {
     grid-column: 1;
@@ -346,7 +343,19 @@ body {
     align-content: center;
 }
 .card {
+    display: grid;
+    grid-template-columns: 9px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "design content"
+    ;
+
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card .design {
+    background-color: #F9CB40;
 }
