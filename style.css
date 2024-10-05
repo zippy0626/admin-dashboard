@@ -219,7 +219,7 @@ body {
         "user-cards";
 
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 /* User Banner */
 .user-banner {
@@ -332,6 +332,11 @@ body {
 
     margin-left: 2rem;
     overflow: auto;
+}
+/* Title Styling */
+.user-cards p {
+    font-size: 14px;
+    font-weight: bold;
 }
 .projects-title {
     margin-left: 2rem;
