@@ -166,7 +166,7 @@ body {
 .sidebar {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, minmax(250px, 300px));
+    grid-template-rows: repeat(2, 250px);
     row-gap: 2rem;
 
     padding: 2rem 8px 5px 8px;
