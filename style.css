@@ -18,14 +18,14 @@ html, body {
 body {
     display: grid;
     grid-template-columns: 200px minmax(400px, calc(100vw - 200px));
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 48px 1fr;
 
     grid-template-areas: 
         "logo user-profile"
         "sidebar main-content";
 
     font-family: "Roboto", sans-serif;
-    background-color: var(--primaryColor);
+    overflow: hidden;
 }
 
 
@@ -39,18 +39,18 @@ body {
     padding-left: 8px;
     padding-top: 5px;
     color: white;
+    background-color: var(--primaryColor);
 }
 .symbol {
     width: 30px;
     height: 30px;
     margin: auto 1px auto auto; /**/
-    outline: 1px white solid;
     user-select: none;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 1px;
+    gap: 2px;
 }
 .logo p {
     margin-left: 8px; /**/
@@ -81,14 +81,11 @@ body {
 /* User Profile */
 .user-profile {
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) 300px;
+    grid-template-columns: minmax(300px, 1fr) 250px;
     grid-template-rows: 1fr;
 
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 8px 5px 8px;
     align-items: center;
-    background-color: var(--secondaryColor);
 }
 .user-search {
     display: grid;
@@ -101,6 +98,7 @@ body {
 #search {
     margin: auto;
     width: 30px;
+    filter: invert(0);
 }
 #user-search-text {
     width: 80%;
@@ -109,6 +107,7 @@ body {
     border-radius: 1rem;
     padding: 0 1rem 0 1rem;
     font-size: 20px;
+    background-color: rgb(239, 239, 239);
 }
 .user {
     display: grid;
@@ -116,8 +115,8 @@ body {
     grid-template-rows: 1fr;
 }
 .bell-container {
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
     margin: auto;
     border-radius: 50%;
     display: flex;
@@ -127,28 +126,40 @@ body {
     user-select: none;
 }
 .bell-container:active {
-    background-color: var(--primaryColorActive);
+    background-color: rgb(199, 199, 199)
 }
 #bell {
     margin: auto;
-    width: 30px;
+    width: 25px;
     border-radius: 50%;
 }
 .user-profile-icon-container {
     margin: auto;
-    margin-top: 5px;
     user-select: none;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 300ms ease-out;
+}
+.user-profile-icon-container:hover {
+    background-color: whitesmoke;
 }
 .profile-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    box-shadow: 0px 0px 1px 0px grey;
 }
-.user p {
-    margin: auto auto auto 10px;
-    color: white;
+.user-name {
+    margin: auto;
+    color: black;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 
@@ -163,6 +174,7 @@ body {
     padding-top: 2rem;
     padding-bottom: 5px;
     user-select: none;
+    background-color: var(--primaryColor);
 }
 .links {
     display: grid;
@@ -188,7 +200,9 @@ body {
 .icon {
     width: 21px;
     margin: auto auto auto 23px;
-    filter: invert(100%);
+}
+.link .icon {
+    filter: invert(1);
 }
 .link p {
     margin-left: 9px;
@@ -200,11 +214,84 @@ body {
 /* Main Content */
 .main-content {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template-areas: ;
+    grid-template-columns: minmax(400px, 1fr);
+    grid-template-rows: 68px 1fr;
+    grid-template-areas: 
+        "user-banner"
+        "user-cards";
 
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color:whitesmoke;
+}
+/* User Banner */
+.user-banner {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "user-greeting user-button-container"
+    ;
+
+    align-items: center;
+    
+}
+.user-greeting {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "banner-profile-icon user-greeting-text"
+    ;
+
+    align-items: center;
+}
+.banner-profile-icon-container {
+    width: calc(55px + 8px);
+    height: calc(55px + 8px);
+    border-radius: 50%;
+    margin: 5px 0 auto 1.5rem;
+    transition: all 300ms ease-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-profile-icon-container:hover {
+    background-color: whitesmoke;
+}
+.banner-profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 0px grey;
+}
+.user-greeting-text {
+    margin-top: 8px;
+}
+.user-greeting-text .user-name {
+    margin: 0;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.user-button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+
+    justify-content: end;
+    margin-right: 2rem;
+    margin-top: 10px;
+}
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: var(--primaryColor);
+    border-radius: 1rem;
+
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    align-content: center;
 }
