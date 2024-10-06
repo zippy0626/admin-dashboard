@@ -421,11 +421,12 @@ body {
     background-color: var(--activeBgColor);
 }
 .card-icon-container:active {
-    background-color: rgb(159, 159, 159);
+    background-color: rgb(175, 175, 175);
 }
 .card-icon {
     width: 23px;
     height: 23px;
+    cursor: pointer;
 }
 /* Other Cards Styling */
 .other-cards {
