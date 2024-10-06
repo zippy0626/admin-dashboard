@@ -312,7 +312,7 @@ body {
 /* User-Cards @bottomHalf*/
 .user-cards {
     display: grid;
-    grid-template-columns: minmax(660px, 1fr) 275px;
+    grid-template-columns: minmax(600px, 675px) 275px;
     grid-template-rows: 30px 1fr;
     grid-template-areas:
         "title title2"
@@ -341,7 +341,7 @@ body {
     overflow: auto;
 }
 /* Title Styling */
-.projects-title, .announcements-title {
+.projects-title, .announcements-title, .trending-title {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -431,10 +431,53 @@ body {
 .other-cards {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 275px 30px 275px;
+    grid-template-rows: 300px 30px 300px;
     grid-template-areas:
         "Announcements"
         "title3"
         "Trending"
-    ;    
+    ;
+    margin-right: 2rem;
+}
+.announcements-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 80px);
+    grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+    ;
+    gap: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 1rem;
+
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    align-content: center;
+}
+.announcement {
+    overflow: hidden;
+    padding: 8px;
+    border-bottom: 1px rgb(199, 199, 199) solid;
+    cursor: pointer;
+}
+.a-last {
+    border-bottom: none;
+}
+.announcement p {
+    font-size: 12px;
+}
+.a-title {
+    font-weight: bold;
+    font-size: 14px !important;
+}
+/* Line Clamp */
+.a-text {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
