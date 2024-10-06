@@ -2,4 +2,4 @@
 
 ![Preview Img:](preview.png)
 
-Live: 
+Live: https://zippy0626.github.io/admin-dashboard/
