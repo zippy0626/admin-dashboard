@@ -309,7 +309,7 @@ body {
 /* User-Cards @bottomHalf*/
 .user-cards {
     display: grid;
-    grid-template-columns: 1fr 275px;
+    grid-template-columns: minmax(660px, 1fr) 275px;
     grid-template-rows: 30px 1fr;
     grid-template-areas:
         "title title2"
@@ -325,7 +325,7 @@ body {
     grid-row: 2;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     grid-template-rows: repeat(3, minmax(200px,220px));
     grid-template-areas:
         "card card2"
