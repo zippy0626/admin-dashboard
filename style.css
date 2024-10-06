@@ -142,11 +142,14 @@ body {
     align-items: center;
     padding-top: 2px;
 }
-/* .user-search label {
-
-} */
+.user-search label {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    justify-self: center;
+}
 #search {
-    margin: 0 !important;
+    margin: 0 !important; 
     width: 30px;
     filter: invert(0);
 }
