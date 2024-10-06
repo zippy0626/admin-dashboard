@@ -432,7 +432,7 @@ body {
 .other-cards {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 30px 300px;
+    grid-template-rows: 300px 30px 358px;
     grid-template-areas:
         "Announcements"
         "title3"
@@ -452,7 +452,7 @@ body {
     gap: 5px;
     padding: 10px;
     padding-left: 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     border-radius: 1rem;
     background-color: whitesmoke;
@@ -481,4 +481,48 @@ body {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+}
+.trending-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "user1"
+        "user2"
+        "user3"
+        "user4"
+        "user5"
+    ;
+    
+    padding: 14px;
+    padding-left: 18px;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    align-content: center;
+}
+.trending-user {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: repeat(2, 22.5px);
+    grid-template-areas:
+        "icon user-name"
+        "icon user-project"
+    ;
+    column-gap: 5px;
+
+    padding: 10px;
+    align-self: center;
+    cursor: pointer;
+}
+.trending-user img {
+    grid-row: 1/-1;
+    margin: auto;
+}
+.trending-user-name {
+    margin-top: 5px;
+    font-weight: bold;
+}
+.trending-user-name, .trending-user-project {
+    font-size: 12px;
+    align-self: center;
 }
