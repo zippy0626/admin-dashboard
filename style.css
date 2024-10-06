@@ -424,3 +424,14 @@ body {
     width: 23px;
     height: 23px;
 }
+/* Other Cards Styling */
+.other-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 275px 30px 275px;
+    grid-template-areas:
+        "Announcements"
+        "title3"
+        "Trending"
+    ;    
+}
